@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Function</title>
+</head>
+<body>
+    <div id="exer01">
+            <div id="entradaDados01" class="center">
+                <label>
+                    Digite um numero : <input id="numExer01" type="number" name="txtSquare" value=""><br>
+                </label>
+                <button id="btnCalc01">Calcular</button>
+            </div>
+            <div id="resultado01"></div>
+    </div>
+
+
+
+    <div id="exer02" >
+            <div id="entradaDados02" class="center">
+                <label>
+                    Digite o 1º : <input id="num01Exer02" type="number" name="txtNumber01" value=""><br>
+                </label>
+                <label>
+                    Digite 0 2º: <input id="num02Exer02" type="number" name="txtNumber02" value=""><br>
+                </label>
+                <button id="btnCalc02">Calcular</button>
+            </div>
+            <div id="resultado02"></div>
+    </div>
+
+
+
+    <div id="exer03">
+
+        <div id="entradaDados03" class="center">
+            <label>
+                Digite seu nome: <input  id="nameExer03" type="text" name="txtName01" value=""><br>
+            </label>
+            <label>
+                Estado: 
+                SP <input class="radioEstado" type="radio" name="radEstado" value="SP">
+                RJ <input class="radioEstado" type="radio" name="radEstado" value="RJ">
+                MG <input class="radioEstado" type="radio" name="radEstado" value="MG">
+                ES <input class="radioEstado" type="radio" name="radEstado" value="ES"><br>
+            </label>
+            <button id="btnEnviar01">Enviar</button>
+        </div>
+        <div id="resultado03"></div>
+        
+    </div>
+
+
+
+
+    <div id="exer04">
+        <form name="frmExer04" action="index.html" method="POST" >
+
+        <div id="entradaDados04" class="center">
+            <label>
+                Digite seu nome: <input id="nameExer04" type="text" name="txtName02" value=""><br>
+            </label>
+            <label>
+                Profissão: <br><br>
+                Informatica<input type="checkbox" name="chkInfo" value=""><br>
+                Marketing<input type="checkbox" name="chkMark" value=""><br>
+                Medicina<input type="checkbox" name="chkMed" value=""><br>
+                Recursos Humanos<input type="checkbox" name="chkRH" value=""><br>
+                Administração<input type="checkbox" name="chkADM" value=""><br> 
+            </label>
+            <button id="btnEnviar02">Enviar</button>
+        </div>
+        <div id="resultado04"></div>
+        </form>
+    </div>
+    <script src="function.js"></script>
+</body>
+</html>
