@@ -40,7 +40,7 @@
             <label>
                 Digite seu nome: <input  id="nameExer03" type="text" name="txtName01" value=""><br>
             </label>
-            <label>
+            <label id="radio">
                 Estado: 
                 SP <input class="radioEstado" type="radio" name="radEstado" value="SP">
                 RJ <input class="radioEstado" type="radio" name="radEstado" value="RJ">
@@ -57,24 +57,21 @@
 
 
     <div id="exer04">
-        <form name="frmExer04" action="index.html" method="POST" >
-
         <div id="entradaDados04" class="center">
             <label>
                 Digite seu nome: <input id="nameExer04" type="text" name="txtName02" value=""><br>
             </label>
             <label>
                 Profissão: <br><br>
-                Informatica<input type="checkbox" name="chkInfo" value=""><br>
-                Marketing<input type="checkbox" name="chkMark" value=""><br>
-                Medicina<input type="checkbox" name="chkMed" value=""><br>
-                Recursos Humanos<input type="checkbox" name="chkRH" value=""><br>
-                Administração<input type="checkbox" name="chkADM" value=""><br> 
+                Informatica<input type="checkbox" name="chk" value="Informatica"><br>
+                Marketing<input type="checkbox" name="chk" value="Marketing"><br>
+                Medicina<input type="checkbox" name="chk" value="Medicina"><br>
+                Recursos Humanos<input type="checkbox" name="chk" value="RH"><br>
+                Administração<input type="checkbox" name="chk" value="ADM"><br> 
             </label>
             <button id="btnEnviar02">Enviar</button>
         </div>
         <div id="resultado04"></div>
-        </form>
     </div>
     <script src="function.js"></script>
 </body>
