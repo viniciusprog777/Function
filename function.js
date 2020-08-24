@@ -10,11 +10,20 @@ const resul02 = document.querySelector('#resultado02');
 
 
 const name01 = document.querySelector('#nameExer03');
-const estado = document.querySelector('.radioEstado');
+const estado = document.getElementsByName('radEstado');
 const enviar01 = document.querySelector('#btnEnviar01');
 const resul03 = document.querySelector('#resultado03');
+var testaEstado;
 
 
+
+const name02 = document.querySelector('#nameExer04');
+const prof = document.getElementsByName('chk');
+const enviar02 = document.querySelector('#btnEnviar02');
+const resul04 = document.querySelector('#resultado04');
+var interesses = null;
+
+console.log(estado);
 
 const square = ( numero )  => numero ** 2;
 const exer01 = () => {
@@ -34,17 +43,46 @@ const exer02 = () =>{
     resul02.innerHTML = maiorMenor(num01.value, num02.value);
 }
 
-
 const nameEst = (name, est) => {
-    return name + " mora no estado de " + est;
+    for (let i=0;i<=est.length;i++){ 
+        if (est[i].checked == true){ 
+            testaEstado =  est[i].value;
+            break;
+        }  
+        
+    }
+    return name + " mora no estado de " + testaEstado;
 }
+
 const exer03 = () =>{
-    resul03.innerHTML = nameEst(name01.value, estado.value);
+    resul03.innerHTML = nameEst(name01.value, estado);
 }
-const nameProf = (name, profission) => {
-    return
+
+
+const nameProf = (nome, profission) => {
+
+    for (let i=0;i<=profission.length;i++){ 
+        if (profission[i].checked == true){ 
+            interesses = interesses + profission[i].value + ", ";
+
+        }  
+        
+    }
+    return interesses + "são as aréas de interesse de " + nome;
 }
+
+
+
+
+
+
+
+const exer04 = () =>{
+    resul04.innerHTML = nameProf(name02, prof);
+}
+
 
 calcSquare.addEventListener( 'click' , exer01);
 calcMaiorMenor.addEventListener( 'click' , exer02);
-enviar01.addEventListener('click', exer03)
+enviar01.addEventListener('click', exer03);
+enviar02.addEventListener('click', exer04);
