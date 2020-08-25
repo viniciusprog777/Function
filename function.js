@@ -21,7 +21,7 @@ const name02 = document.querySelector('#nameExer04');
 const prof = document.getElementsByName('chk');
 const enviar02 = document.querySelector('#btnEnviar02');
 const resul04 = document.querySelector('#resultado04');
-var interesses = null;
+var interesses;
 
 console.log(estado);
 
@@ -60,8 +60,9 @@ const exer03 = () =>{
 
 
 const nameProf = (nome, profission) => {
+    let interesses = "";
 
-    for (let i=0;i<=profission.length;i++){ 
+    for (let i=0;i<=profission.length -1 ;i++){ 
         if (profission[i].checked == true){ 
             interesses = interesses + profission[i].value + ", ";
 
@@ -71,14 +72,8 @@ const nameProf = (nome, profission) => {
     return interesses + "são as aréas de interesse de " + nome;
 }
 
-
-
-
-
-
-
 const exer04 = () =>{
-    resul04.innerHTML = nameProf(name02, prof);
+    resul04.innerHTML = nameProf(name02.value, prof);
 }
 
 
